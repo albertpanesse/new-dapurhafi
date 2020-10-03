@@ -2,12 +2,11 @@ import { Routes } from "@angular/router";
 
 export const appRoutes: Routes = [
   {
-    path: "default",
+    path: "-",
     loadChildren: () =>
       import("./layouts/default-layout.module").then(
         (m) => m.DefaultLayoutModule
-      ),
-    data: { parent: "login" }
+      )
   },
   {
     path: "admin",
@@ -16,7 +15,7 @@ export const appRoutes: Routes = [
   },
   {
     path: "",
-    redirectTo: "default",
+    redirectTo: "-",
     pathMatch: "full"
   }
 ];

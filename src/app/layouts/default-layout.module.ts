@@ -1,13 +1,19 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { DefaultLayout } from "./default-layout/default-layout.component";
+import { DefaultLayoutComponent } from "./default-layout/default-layout.component";
+import { HomePageComponent } from "../pages/home-page/home-page.component";
 
 export const defaultRoutes: Routes = [
   {
     path: "",
-    component: DefaultLayout,
-    children: []
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: "",
+        component: HomePageComponent
+      }
+    ]
   }
 ];
 
