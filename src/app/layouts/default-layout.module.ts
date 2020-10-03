@@ -18,7 +18,7 @@ export const defaultRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [DefaultLayoutComponent, HomePageComponent],
   imports: [RouterModule.forChild(defaultRoutes)],
   providers: []
 })
